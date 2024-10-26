@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Task Management Tool</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        
+        body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        }
+
+
+        .navbar-brand {
+            font-family: 'Poppins', sans-serif; 
+            font-size: 36px; 
+            color: #6c63ff !important; 
+            font-weight: 1000;
+            text-decoration: none;
+        
+        }
+
+
+        .hero {
+            background-color: #ffffff;
+            padding: 100px 0;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+
+        .custom-input {
+            border-radius: 30px; 
+            padding: 12px 20px;
+            border: 1px solid #ccc; 
+            flex-grow: 1; 
+            height: 50px; 
+        
+        }
+
+        .btn-custom {
+            border-radius: 25px;
+            padding: 12px 30px;
+            background-color: #5c4ce7; 
+            color: white; 
+            border: none; 
+            min-width: 130px; 
+            font-size: 16px; 
+            transition: background-color 0.3s ease;
+            text-align: center; 
+            height: 50px; 
+            line-height: 26px;
+        }
+
+
+        .btn-custom:hover {
+            background-color: #4b3bc7;
+        }
+
+
+
+        .hero-img {
+            width: 100%;
+            max-width: 1080px; 
+            height: auto;
+        }
+
+
+        .navbar .nav-link {
+            font-family: 'Poppins', sans-serif; 
+            background-color: transparent; 
+            color: #6c63ff;
+            padding: 8px 20px; 
+            border-radius: 25px; 
+            font-weight: 80px; 
+            transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+            border: 2px solid #6c63ff;
+            text-align: center;
+        }
+
+
+        .navbar .nav-link:hover {
+            background-color: rgba(108, 99, 255, 0.1); 
+            color: #6c63ff !important; 
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+        }
+
+
+
+        .service-card {
+            padding: 100px; 
+        }
+
+           
+        .services .row {
+            display: flex; 
+            justify-content: space-between; 
+        }
+
+
+
+        .services h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .service-card {
+            text-align: center;
+            padding: 60px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            background-color: #fff;
+        }
+
+        .service-card img {
+            width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+          
+        .service-card-purple {
+            background-color: #5f5abf; 
+            color: white; 
+        }
+        
+        .service-card-purple .a{
+            font-size: 24px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 80px; 
+            }
+
+        .service-card-lightblue {
+            background-color: #cddef1f1; 
+            color: #333; 
+            
+        }
+
+        .service-card-lightblue .b{
+            font-size: 24px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 80px; 
+            }
+
+
+        .service-card-yellow {
+            background-color: #ffeb99; 
+            color: #333; 
+        }
+
+        .service-card-yellow .c{
+            font-size: 24px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 80px; 
+        }
+
+
+
+  
+        .why-section {
+            background-color: #f9f9f9;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .why-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-align: right; 
+        }
+        
+
+        .why-section img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        .why-section p {
+            font-size: 18px;
+            color: #555;
+            margin: 20px 0;
+        }
+
+
+        .trust-section {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .trust-section h2 {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .trust-images-container {
+            position: relative;
+        }
+
+        .trust-img {
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .small-img {
+            width: 140px;
+            height: 140px;
+            position: relative;
+            top: -35px; 
+            left: -50px;
+        }
+
+        .large-img {
+            width: 220px; 
+            height: 220px;
+            position: relative;
+            top: 35px; 
+            left: 50px;
+        }
+
+        .counter {
+            font-size: 80px;
+            font-weight: bold;
+            color: #5c4ce7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .work-section {
+            padding: 40px 0;
+            background-color: #f9f9f9;
+        }
+
+        .work-section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .work-section p {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .work-form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .work-form input[type="email"] {
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+            width: 300px;
+        }
+
+        .work-form button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #5c4ce7;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+
+        .work-form button:hover {
+            background-color: #463eb6;
+        }
+
+        .why-section .text-content {
+        padding-left: 20px; 
+        }
+
+      
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Taskia</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color:#463eb6">Try Free</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+ <section class="hero">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1 class="mb-4" style="font-family: 'Poppins', sans-serif; font-weight: 90px; font-size: 52px;">Task management and lists Tool</h1>
+                <p class="mb-4" style="font-family: Poppins, sans-serif; font-size: 14px; font-weight: bold;">We believe that designing products and services in close partnership with our clients is the only way to have a real impact on their business.</p>
+                <div class="d-flex" style="max-width: 500px;">
+                    <input type="text" class="form-control custom-input mr-3" placeholder="Name@company.com">
+                    <button class="btn btn-custom" type="button">Try it free</button>
+                </div>
+            </div>
+            <div class="col-md-6 text-right">
+                <img src="hero image.jpg" alt="Illustration" class="hero-img img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="services">
+    <div class="container">
+        <h2 class="c-heading" style="font-family: 'Poppins', sans-serif; font-weight: bold; font-size: 36px;">Featured Service that We Provide</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="service-card service-card-purple">
+                    <img src="Image 3.png" alt="Service 1" class="service-img">
+                    <h5 style="font-family: 'Poppins', sans-serif; font-weight: bold; font-size: 18px;">Keep tasks in one place</h5>
+                    <p style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: bold;">Save time, avoid losing work and information, delegate, and track tasks to stay on schedule.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card service-card-lightblue">
+                    <img src="Image 2.png" alt="Service 2" class="service-img">
+                    <h5 style="font-family: 'Poppins', sans-serif; font-weight: bold; font-size: 18px;">Keep tasks in one place</h5>
+                    <p style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: bold;">Save time, avoid losing work and information, delegate, and track tasks to stay on schedule.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card service-card-yellow">
+                    <img src="Image 1.png" alt="Service 3" class="service-img">
+                    <h5 style="font-family: 'Poppins', sans-serif; font-weight: bold; font-size: 18px;">Keep tasks in one place</h5>
+                    <p style="font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: bold;">Save time, avoid losing work and information, delegate, and track tasks to stay on schedule..</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="why-section">
+    <div class="container">
+        <div class="d-flex align-items-center flex-row-reverse">
+            <div class="text-content" style="flex: 1; text-align: right;">
+                <h2 class="c-heading" style="font-family: 'Poppins', sans-serif; font-weight: bold; font-size: 36px; text-align: left;">Why do you need Task Management?</h2>
+                <p style="font-family: Poppins, sans-serif; font-size: 14px; font-weight: bold; text-align: left;">Do you waste time organizing sticky notes, searching your email and apps for to-dos, and figuring out what to work on first? Then you need one solution to prioritize your tasks, manage your time, and meet your deadlines.</p>
+                <button class="btn btn-custom mt-4" style="float: left;">Learn more</button> 
+            </div>
+            <img src="Image 8.jpg" alt="Why Section Image" style="max-width: 50%; height: auto;">
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<section class="services">
+    <div class="container">
+        <div class="d-flex align-items-center flex-row">
+            <div class="text-content" style="flex: 1; text-align: left;">
+                <h2 class="c-heading" style="font-family: 'Poppins', sans-serif; font-weight: bold; font-size: 36px; text-align: left;">Seamless Team Workflow & Efficient</h2>
+                <p style="font-family: Poppins, sans-serif; font-size: 14px; font-weight: bold; text-align: left;">Do you waste time organizing sticky notes, searching your email and apps for to-dos, and figuring out what to work on first? Then you need one solution to prioritize your tasks, manage your time, and meet your deadlines.</p>
+                
+               
+                <div class="row mt-4 text-center">
+                    <div class="col">
+                        <img src="Image 6.jpg" alt="Small Image 1" class="img-fluid" style="max-width: 100%; height: auto;">
+                    </div>
+                    <div class="col">
+                        <img src="Image 9.jpg" alt="Small Image 2" class="img-fluid" style="max-width: 100%; height: auto;">
+                    </div>
+                </div>
+               
+
+            </div>
+            <img src="Image 7.jpg" alt="Seamless Workflow" class="img-fluid" style="max-width: 50%; height: auto;">
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="trust-section">
+    <div class="container">
+        <h2 class="c-heading" style="font-family: 'Poppins', sans-serif; font-weight: bold; font-size: 36px;">Trust us and feel free to try our service</h2>
+        <div class="d-flex flex-column flex-md-row justify-content-center align-items-center trust-images-container">
+            <img src="Image 4.jpg" alt="Client Image 1" class="trust-img img-fluid small-img mb-3 mb-md-0">
+            <div class="counter mx-3">100,000</div>
+            <img src="Image 5.jpg" alt="Client Image 2" class="trust-img img-fluid large-img">
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="work-section">
+    <div class="container text-center">
+        <h2 class="c-heading" style="font-family: 'Poppins', sans-serif; font-weight: bold; font-size: 36px;">Get better work done</h2>
+        <p>See why millions of people across 195 countries use Dash.</p>
+        <form class="work-form">
+            <input type="email" placeholder="Name@company.com" required>
+            <button type="submit">Try it free</button>
+        </form>
+    </div>
+</section>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+   
+    document.querySelector('.btn-custom').addEventListener('click', function() {
+        const emailField = document.querySelector('.custom-input');
+        if (emailField.value.trim() === '') {
+            alert('Please enter your email address.');
+            emailField.focus();
+        } else {
+            alert('Thank you for trying it free!'); 
+            emailField.value = ''; 
+        }
+    });
+
+ 
+    document.querySelector('.navbar .nav-link').addEventListener('click', function() {
+        alert('You clicked "Try Free"!'); 
+    });
+
+
+    document.querySelector('.why-section .btn-custom').addEventListener('click', function() {
+        alert('Learn more about our services!'); 
+    });
+
+    
+    document.querySelector('.work-form').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        const emailField = this.querySelector('input[type="email"]');
+        if (emailField.value.trim() === '') {
+            alert('Please enter your email address.');
+            emailField.focus();
+        } else {
+            alert('Thank you for signing up!'); 
+            emailField.value = ''; 
+        }
+    });
+</script>
+
+
+</body>
+</html>
